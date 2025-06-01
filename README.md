@@ -308,4 +308,4 @@ If you have any questions or issues:
 
 ---
 
-**Built with ❤️ using FastAPI, React, and Scikit-learn** 
+**Built with ❤️ using FastAPI, React, and Scikit-learn**
