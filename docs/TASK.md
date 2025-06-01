@@ -13,16 +13,15 @@
 - [x] Create FastAPI backend for model serving
 - [x] Build React frontend with prediction form
 - [x] Implement API integration
-
-### 🔄 In Progress
 - [x] Deploy backend to Google Cloud Platform
 - [x] Deploy frontend to Netlify
+
+### 🔄 In Progress
 - [ ] Add comprehensive testing
 
 ### 📋 Pending
 - [ ] Polish UI/UX design
 - [ ] Add error handling and validation
-- [ ] Create deployment configuration
 - [ ] Write comprehensive documentation
 
 ## Sub-tasks for Current Work
@@ -50,6 +49,23 @@
 - [ ] Optimize performance
 
 ## Discovered During Work
+
+### Deployment Infrastructure Added
+- **Google Cloud deployment configurations**: `app.yaml`, `Dockerfile`
+- **Deployment scripts**: `deploy.sh`, `deploy-cloud-run.sh` for backend automation
+- **Netlify configuration**: `netlify.toml` for frontend deployment
+- **Frontend deployment script**: `deploy-netlify.sh` for automation
+- **Comprehensive deployment guide**: `docs/DEPLOYMENT.md`
+- **Production-ready CORS configuration** for cross-platform communication
+- **Environment-based configuration** for development vs production
+- **Health checks and monitoring** setup for both platforms
+
+### Deployment Options Created
+- **Backend**: Google App Engine (recommended) or Google Cloud Run
+- **Frontend**: Netlify with automatic CDN and SSL
+- **Scripts**: Automated deployment with error checking and validation
+- **Documentation**: Complete step-by-step deployment guide
+
 - Model uses 9 input features: reviewText, title, rating, genre, reviewerName, originalLanguage, distributor, director, audienceScore
 - Three trained models available: LogisticRegression, SVC, SGD
 - Need to recreate the preprocessing pipeline from the notebook
