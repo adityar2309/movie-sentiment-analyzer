@@ -1,20 +1,22 @@
 # Task Tracking - Movie Sentiment Prediction App
 
-## Current Task: Create React Frontend for Model Predictions
+## Current Task: Deploy Application to Cloud Platforms
 **Date Started**: 2024-12-19
-**Description**: Build a React frontend application to interface with trained movie sentiment analysis models, allowing users to input review data and get real-time predictions.
+**Description**: Deploy backend to Google Cloud using gcloud CLI and frontend to Netlify for production availability.
 
 ## Main Tasks
 
 ### ✅ Completed
-- [ ] Read and understand existing ML model structure
-- [ ] Create project planning documentation
-- [ ] Set up project structure
+- [x] Read and understand existing ML model structure
+- [x] Create project planning documentation
+- [x] Set up project structure
+- [x] Create FastAPI backend for model serving
+- [x] Build React frontend with prediction form
+- [x] Implement API integration
 
 ### 🔄 In Progress
-- [ ] Create FastAPI backend for model serving
-- [ ] Build React frontend with prediction form
-- [ ] Implement API integration
+- [x] Deploy backend to Google Cloud Platform
+- [x] Deploy frontend to Netlify
 - [ ] Add comprehensive testing
 
 ### 📋 Pending
