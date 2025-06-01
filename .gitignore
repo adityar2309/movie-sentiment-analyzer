@@ -105,3 +105,5 @@ ADITYAR-MOVIE-SENTIMENT-SCIKITLEARN/
 
 # Helper scripts
 examine_data.py 
+# Local Netlify folder
+.netlify
