@@ -198,30 +198,73 @@ REACT_APP_API_URL=http://localhost:8000
 
 ## 🚀 Deployment
 
-### Backend Deployment
+**For detailed deployment instructions, see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**
 
-1. **Docker**:
+### Quick Deployment
+
+#### Backend to Google Cloud
+```bash
+cd backend
+
+# Option 1: App Engine (Recommended)
+./deploy.sh
+
+# Option 2: Cloud Run (Containerized)
+./deploy-cloud-run.sh
+```
+
+#### Frontend to Netlify
+```bash
+cd frontend
+./deploy-netlify.sh
+```
+
+### Manual Deployment
+
+#### Backend Deployment
+
+1. **Google Cloud App Engine**:
+   ```bash
+   cd backend
+   gcloud app deploy app.yaml
+   ```
+
+2. **Docker (Local/Cloud)**:
    ```bash
    cd backend
    docker build -t movie-sentiment-api .
    docker run -p 8000:8000 movie-sentiment-api
    ```
 
-2. **Production Server**:
+3. **Production Server**:
    ```bash
    pip install gunicorn
    gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker
    ```
 
-### Frontend Deployment
+#### Frontend Deployment
 
-1. **Build for production**:
+1. **Netlify**:
+   ```bash
+   cd frontend
+   npm run build
+   netlify deploy --prod --dir=build
+   ```
+
+2. **Build for production**:
    ```bash
    cd frontend
    npm run build
    ```
 
-2. **Serve static files** with any web server (nginx, Apache, etc.)
+3. **Serve static files** with any web server (nginx, Apache, etc.)
+
+### Production Configuration
+
+- **Backend**: Automatically configures CORS for production domains
+- **Frontend**: Uses environment variables for API URL configuration
+- **HTTPS**: Both platforms provide automatic SSL certificates
+- **Scaling**: Auto-scaling configured for both platforms
 
 ## 📊 Model Performance
 
