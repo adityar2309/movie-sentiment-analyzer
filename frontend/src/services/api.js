@@ -68,7 +68,7 @@ class SentimentAPI {
    */
   async checkHealth() {
     try {
-      const response = await api.get('/api/v1/health');
+      const response = await api.get('/healthz');
       return response.data;
     } catch (error) {
       throw new Error(`Health check failed: ${error.message}`);
@@ -126,7 +126,7 @@ class SentimentAPI {
 
       console.log('Sending prediction request with data:', cleanData);
 
-      const response = await api.post('/api/v1/predict', cleanData);
+      const response = await api.post('/predict', cleanData);
       return response.data;
     } catch (error) {
       throw new Error(`Prediction failed: ${error.message}`);
@@ -140,7 +140,7 @@ class SentimentAPI {
    */
   async retrainModels() {
     try {
-      const response = await api.post('/api/v1/models/retrain');
+      const response = await api.post('/train');
       return response.data;
     } catch (error) {
       throw new Error(`Model retraining failed: ${error.message}`);

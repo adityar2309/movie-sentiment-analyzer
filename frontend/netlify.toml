@@ -37,13 +37,13 @@
 
 # Environment variables with actual backend URL
 [context.production.environment]
-  REACT_APP_API_URL = "https://ttsai-461209.de.r.appspot.com"
+  REACT_APP_API_URL = "https://movie-sentiment-api-392783720407.us-central1.run.app"
   REACT_APP_ENVIRONMENT = "production"
 
 [context.deploy-preview.environment]
-  REACT_APP_API_URL = "https://ttsai-461209.de.r.appspot.com"
+  REACT_APP_API_URL = "https://movie-sentiment-api-392783720407.us-central1.run.app"
   REACT_APP_ENVIRONMENT = "preview"
 
 [context.branch-deploy.environment]
-  REACT_APP_API_URL = "https://ttsai-461209.de.r.appspot.com"
-  REACT_APP_ENVIRONMENT = "development" 
+  REACT_APP_API_URL = "https://movie-sentiment-api-392783720407.us-central1.run.app"
+  REACT_APP_ENVIRONMENT = "development"
