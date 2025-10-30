@@ -5,7 +5,7 @@
  * and submitting it for sentiment analysis.
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import sentimentAPI from '../services/api';
 
